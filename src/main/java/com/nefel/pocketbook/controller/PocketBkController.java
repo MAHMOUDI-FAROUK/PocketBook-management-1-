@@ -39,12 +39,19 @@ public class PocketBkController {
     }
 
     @PutMapping("/expenses/edit/{id}")
-    public Expense updateExpenses(@PathVariable("id") Integer id, @RequestBody Expense expense ){
-        return service.update(expense);
+    public Expense updateExpenses(@PathVariable("id") Integer id, Model model ){
+        model.addAttribute("expense", service.update(expense));
+        return "edit_expense";
     }
+    @GetMapping("/expenses/edit/{id}")
+	public String editExpenseForm(@PathVariable Integer id, Model model) {
+		model.addAttribute("expense", servise.get(id));
+		return "edit_student";
+	}
 
     @DeleteMapping("/expenses/delete/{id}")
     public void updateExpenses(@PathVariable("id") Integer id){
         service.delete(id);
+		return "redirect:/index";
     }
 }

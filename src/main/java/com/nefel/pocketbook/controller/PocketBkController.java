@@ -12,7 +12,7 @@ import java.util.List;
 
 @Controller
 //@RequestMapping("/expenses")
-//@AllArgsConstructor
+@AllArgsConstructor
 public class PocketBkController {
 
     @Autowired

@@ -27,11 +27,11 @@ public class ExpenseService {
     }
 
     public void delete(Integer expenseId){
-        expenseRepos.deleteById(expenseId);
+        expenseRepos.deleteById(id);
     }
 
     public Expense get(Integer expenseId){
-        return expenseRepos.findById(expenseId).get();
+        return expenseRepos.findById(id).get();
     }
 
     public List<Expense> getAll(){

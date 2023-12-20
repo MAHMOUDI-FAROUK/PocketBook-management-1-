@@ -20,13 +20,13 @@ public class PocketbookApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		
-		 Expense expense1 = new Expense("Farouk", "xxxxx", "54","xxxxxxxx");
+		 Expense expense1 = new Expense("Farouk", "xxxxx", 54.0f,"xxxxxxxx");
 		 expenseRepos.save(expense1);
 		 
-		 Expense expense2 = new Expense("fathi", "yyyyy", "15","yyyyyyy");
+		 Expense expense2 = new Expense("fathi", "yyyyy", 12.6f,"yyyyyyy");
 		 expenseRepos.save(expense2);
 		 
-		 Expense expense3 = new Expense("Ahlem", "zzzzzz", "64","zzzzzz");
+		 Expense expense3 = new Expense("Ahlem", "zzzzzz", 44.0f,"zzzzzz");
 		 expenseRepos.save(expense3);
 		 
 		
